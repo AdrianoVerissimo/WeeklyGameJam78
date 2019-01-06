@@ -4,15 +4,32 @@ using UnityEngine;
 
 public class MovimentacaoPersonagem : MonoBehaviour
 {
-    // Start is called before the first frame update
+    Rigidbody2D player;
+    Vector2 move;
+    public float velocidade = 0.001f; /*velocidade da movimentação*/
     void Start()
     {
+        //Linkando o Rigidbody na variável ao iniciar o game
+        player = GetComponent<Rigidbody2D>();
         
     }
 
-    // Update is called once per frame
-    void Update()
+    
+    void FixedUpdate()
     {
         
+        
+        //Eixos para a movimentação
+        float horizontal = Input.GetAxis("Horizontal");
+        float vertical = Input.GetAxis("Vertical");
+        
+        
+        //Movimentação do personagem
+        move = new Vector2(horizontal, vertical);
+
+        //Aplicando movimento
+        player.velocity += move * velocidade * Time.deltaTime;
+
+  
     }
 }
