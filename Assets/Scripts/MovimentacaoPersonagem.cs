@@ -6,7 +6,7 @@ public class MovimentacaoPersonagem : MonoBehaviour
 {
     Rigidbody2D player;
     Vector2 move;
-    public float velocidade = 0.001f; /*velocidade da movimentação*/
+    public float velocidade = 5f; /*velocidade da movimentação*/
     void Start()
     {
         //Linkando o Rigidbody na variável ao iniciar o game
@@ -28,7 +28,9 @@ public class MovimentacaoPersonagem : MonoBehaviour
         move = new Vector2(horizontal, vertical);
 
         //Aplicando movimento
-        player.velocity += move * velocidade * Time.deltaTime;
+        player.velocity = move * velocidade * Time.fixedDeltaTime;
+
+       
 
   
     }
