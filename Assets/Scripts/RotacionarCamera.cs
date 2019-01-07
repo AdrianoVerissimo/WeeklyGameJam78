@@ -9,6 +9,7 @@ public class RotacionarCamera : MonoBehaviour
     float AnguloTemp;
     private float RotacaoZ = 0;
     public float valor = 45;
+    public float velocidade = 0.001f;
     void Start()
     {
         AnguloTemp = valor;
@@ -31,7 +32,7 @@ public class RotacionarCamera : MonoBehaviour
             RotacaoZ -= 360;
         }
 
-        else if(RotacaoZ <= 360) {
+        else if(RotacaoZ <= -360) {
             RotacaoZ += 360;
         }
 
