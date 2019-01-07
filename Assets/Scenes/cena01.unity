@@ -419,3 +419,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valor: 5
+  anguloMudar: 90
+  velocidade: 0.1

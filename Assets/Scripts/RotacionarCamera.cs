@@ -6,34 +6,45 @@ public class RotacionarCamera : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    float AnguloTemp;
+    
+    
+    public float valor = 5;
+    public float anguloMudar = 90f;
+    
     private float RotacaoZ = 0;
-    public float valor = 45;
-    public float velocidade = 0.001f;
+
+    private float valorUsar = 0f;
+
+
     void Start()
     {
-        AnguloTemp = valor;
+        valorUsar = valor;
     }
 
     
-    void Update()
+    void FixedUpdate()
     {
-        if (RotacaoZ >= 90f || RotacaoZ <= -90f)
+        //if (RotacaoZ >= anguloMudar || RotacaoZ <= -anguloMudar)
+        if (Mathf.Abs(RotacaoZ) >= anguloMudar) //se o ângulo absoluto (sem sinal) for maior do que o ângulo limite
         {
-            AnguloTemp = AnguloTemp * -1;
+            valorUsar *= -1; //inverte o valor usado para somar no ângulo. Se positivo, vai somar; se negativo, vai subtrair.
         }
 
-        Rotacao(AnguloTemp);
+        Rotacao(valorUsar);
     }
 
     void Rotacao(float valor) {
         RotacaoZ += valor;
-        if(RotacaoZ >= 360) {
-            RotacaoZ -= 360;
+        print(RotacaoZ);
+
+        if(RotacaoZ >= 360f) {
+            RotacaoZ -= 360f;
         }
 
-        else if(RotacaoZ <= -360) {
-            RotacaoZ += 360;
+
+        else if(RotacaoZ <= -360f) {
+            RotacaoZ += 360f;
+
         }
 
         Quaternion NovaRotacao = Quaternion.Euler(0, 0, RotacaoZ);
