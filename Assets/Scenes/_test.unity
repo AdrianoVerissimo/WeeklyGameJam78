@@ -477,6 +477,7 @@ MonoBehaviour:
   - {r: 0.6431373, g: 0.28686404, b: 0.25882357, a: 1}
   - {r: 0.85882354, g: 0.07058822, b: 0.07058822, a: 1}
   spriteRenderer: {fileID: 1442478531}
+  testMode: 1
 --- !u!212 &1442478531 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 2577496773095147848, guid: 93ee4ecc95319d84b8630b9b67ba4374,
@@ -493,6 +494,11 @@ PrefabInstance:
     - target: {fileID: 2577496773095147855, guid: 93ee4ecc95319d84b8630b9b67ba4374,
         type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2577496773095147855, guid: 93ee4ecc95319d84b8630b9b67ba4374,
+        type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 2577496773095147851, guid: 93ee4ecc95319d84b8630b9b67ba4374,
@@ -690,6 +696,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2781701373737930075, guid: 94c7915a6562e9548a9671831cb18224,
+        type: 3}
+      propertyPath: anguloMudar
+      value: 45
+      objectReference: {fileID: 0}
     - target: {fileID: 2999862030054839797, guid: 94c7915a6562e9548a9671831cb18224,
         type: 3}
       propertyPath: m_Name
@@ -752,9 +763,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2999862030054839796, guid: 94c7915a6562e9548a9671831cb18224,
         type: 3}
+      propertyPath: arrayTagsCollider.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2999862030054839796, guid: 94c7915a6562e9548a9671831cb18224,
+        type: 3}
       propertyPath: rb2d
       value: 
       objectReference: {fileID: 2999862028639661952}
+    - target: {fileID: 2999862030054839796, guid: 94c7915a6562e9548a9671831cb18224,
+        type: 3}
+      propertyPath: arrayTagsCollider.Array.data[0]
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c7915a6562e9548a9671831cb18224, type: 3}
 --- !u!50 &2999862028639661952 stripped

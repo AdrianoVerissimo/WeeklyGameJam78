@@ -1,10 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CharacterController : MonoBehaviour
+public class ColorController : MonoBehaviour
 {
+
+    [Header("Color Config")]
     public Color[] arrayColor;
     public SpriteRenderer spriteRenderer;
+
+    [Header("Other Config")]
+    public bool testMode = false;
 
     private Color initialColor;
     private int currentColorLevel = 0;
@@ -19,17 +24,18 @@ public class CharacterController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (testMode)
         {
-            ShowNextColor();
-        }
-        else if (Input.GetButtonDown("Fire2"))
-        {
-            ShowPreviousColor();
+            CheckInputs();
         }
     }
 
     #region --- COLOR ---
+
+    public int getCurrentColorLevel()
+    {
+        return currentColorLevel;
+    }
 
     public void SetColorLevel(int value)
     {
@@ -43,9 +49,13 @@ public class CharacterController : MonoBehaviour
     {
         SetColorLevel(currentColorLevel - value);
     }
-    public void ResetColorLevel()
+    public void ResetColor()
     {
+        if (getCurrentColorLevel() == 0)
+            return;
+
         currentColorLevel = 0;
+        spriteRenderer.color = initialColor;
     }
 
     public void ShowNextColor()
@@ -65,6 +75,22 @@ public class CharacterController : MonoBehaviour
         spriteRenderer.color = arrayColor[currentColorLevel];
     }
 
+
+    #endregion
+
+    #region --- INPUTS ---
+
+    public void CheckInputs()
+    {
+        if (Input.GetButtonDown("Fire1"))
+        {
+            ShowNextColor();
+        }
+        else if (Input.GetButtonDown("Fire2"))
+        {
+            ShowPreviousColor();
+        }
+    }
 
     #endregion
 }

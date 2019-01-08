@@ -14,6 +14,8 @@ public class EnemyController : MonoBehaviour
     private SpriteRenderer spriteRendererTarget;
     private Color oldTargetColor;
 
+    private ColorController colorController;
+
     private void Start()
     {
 
@@ -28,18 +30,9 @@ public class EnemyController : MonoBehaviour
     {
         if (CheckCollider(collision.tag))
         {
-            spriteRendererTarget = collision.GetComponent<SpriteRenderer>();
-            Color oldColor = spriteRendererTarget.color;
-            oldTargetColor = oldColor;
-
-
-            spriteRendererTarget.color = foundColor;
+            colorController = collision.GetComponent<ColorController>();
+            colorController.ResetColor();
         }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        spriteRendererTarget.color = oldTargetColor;
     }
 
     public bool CheckCollider(string tag)
