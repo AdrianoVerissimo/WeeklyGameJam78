@@ -6,8 +6,8 @@ public class RotacionarCamera : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    
-    
+
+    public bool rotacionarAutomatico = true;
     public float valor = 5;
     public float anguloMudar = 90f;
     
@@ -24,13 +24,16 @@ public class RotacionarCamera : MonoBehaviour
     
     void FixedUpdate()
     {
-        //if (RotacaoZ >= anguloMudar || RotacaoZ <= -anguloMudar)
-        if (Mathf.Abs(RotacaoZ) >= anguloMudar) //se o ângulo absoluto (sem sinal) for maior do que o ângulo limite
+        if (rotacionarAutomatico)
         {
-            valorUsar *= -1; //inverte o valor usado para somar no ângulo. Se positivo, vai somar; se negativo, vai subtrair.
-        }
+            //if (RotacaoZ >= anguloMudar || RotacaoZ <= -anguloMudar)
+            if (Mathf.Abs(RotacaoZ) >= anguloMudar) //se o ângulo absoluto (sem sinal) for maior do que o ângulo limite
+            {
+                valorUsar *= -1; //inverte o valor usado para somar no ângulo. Se positivo, vai somar; se negativo, vai subtrair.
+            }
 
-        Rotacao(valorUsar * Time.fixedDeltaTime);
+            Rotacao(valorUsar * Time.fixedDeltaTime);
+        }
     }
 
     void Rotacao(float valor) {

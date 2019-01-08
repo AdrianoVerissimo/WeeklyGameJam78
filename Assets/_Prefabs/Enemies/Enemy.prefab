@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2999862028800677461}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.05, y: 0, z: 0}
+  m_LocalPosition: {x: -0.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2999862030054839795}
@@ -275,9 +275,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bd0ad0cfcf087945b7f242ee75af843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb2d: {fileID: 0}
-  arrayTagsCollider: []
+  rb2d: {fileID: 2999862030054839794}
+  lightObject: {fileID: 2999862028800677459}
+  col2D: {fileID: 2999862030361823680}
+  arrayTagsCollider:
+  - Player
   foundColor: {r: 0, g: 0, b: 0, a: 0}
+  turnOffByTime: 0
   timeTurnedOn: 2
   timeTurnedOff: 3
 --- !u!114 &2781701373737930075
@@ -292,6 +296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac4c14b2d018d2b42a33cd89a7d03d87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotacionarAutomatico: 1
   valor: 20
   anguloMudar: 90
 --- !u!1 &2999862030361823682
