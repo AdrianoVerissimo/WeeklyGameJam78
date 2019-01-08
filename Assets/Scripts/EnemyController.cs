@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEditor;
 
-public class CharTest : MonoBehaviour
+public class EnemyController : MonoBehaviour
 {
     public Rigidbody2D rb2d;
 
