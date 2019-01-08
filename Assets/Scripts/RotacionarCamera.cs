@@ -10,9 +10,11 @@ public class RotacionarCamera : MonoBehaviour
     
     public float valor = 5;
     public float anguloMudar = 90f;
-
+    
     private float RotacaoZ = 0;
+
     private float valorUsar = 0f;
+
 
     void Start()
     {
@@ -39,8 +41,10 @@ public class RotacionarCamera : MonoBehaviour
             RotacaoZ -= 360f;
         }
 
+
         else if(RotacaoZ <= -360f) {
             RotacaoZ += 360f;
+
         }
 
         Quaternion NovaRotacao = Quaternion.Euler(0, 0, RotacaoZ);
