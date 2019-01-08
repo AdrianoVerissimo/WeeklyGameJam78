@@ -30,7 +30,7 @@ public class RotacionarCamera : MonoBehaviour
             valorUsar *= -1; //inverte o valor usado para somar no ângulo. Se positivo, vai somar; se negativo, vai subtrair.
         }
 
-        Rotacao(valorUsar);
+        Rotacao(valorUsar * Time.fixedDeltaTime);
     }
 
     void Rotacao(float valor) {
