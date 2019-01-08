@@ -1,13 +1,18 @@
 ﻿using UnityEngine;
 using UnityEditor;
+using System.Collections;
+using System.Collections.Generic;
 
 public class EnemyController : MonoBehaviour
 {
     public Rigidbody2D rb2d;
+    public Light lightObject;
+    public Collider2D col2D;
 
     public string[] arrayTagsCollider;
     public Color foundColor;
 
+    public bool turnOffByTime = false;
     public float timeTurnedOn = 2f;
     public float timeTurnedOff = 3f;
 
@@ -18,7 +23,10 @@ public class EnemyController : MonoBehaviour
 
     private void Start()
     {
-
+        if (turnOffByTime)
+        {
+            StartCoroutine(TurnOff());
+        }
     }
 
     private void Update()
@@ -45,5 +53,34 @@ public class EnemyController : MonoBehaviour
             }
         }
         return false;
+    }
+
+    public IEnumerator TurnOff()
+    {
+        yield return new WaitForSeconds(timeTurnedOn);
+
+        DisableSearchForPlayer();
+        StartCoroutine(TurnOn());
+    }
+    public IEnumerator TurnOn()
+    {
+        yield return new WaitForSeconds(timeTurnedOff);
+
+        EnableSearchForPlayer();
+        StartCoroutine(TurnOff());
+    }
+
+    public void SetSearchForPlayer(bool value)
+    {
+        col2D.enabled = value;
+        lightObject.enabled = value;
+    }
+    public void EnableSearchForPlayer()
+    {
+        SetSearchForPlayer(true);
+    }
+    public void DisableSearchForPlayer()
+    {
+        SetSearchForPlayer(false);
     }
 }
