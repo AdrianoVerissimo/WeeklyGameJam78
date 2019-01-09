@@ -4,8 +4,10 @@ using System.Collections;
 public class DoorController : MonoBehaviour
 {
     public bool isOpen = false;
+    public NPCController[] npcObjectsInteract;
 
     private Animator doorAC;
+    private int npcLenght = 0;
 
     // Use this for initialization
     void Start()
@@ -24,27 +26,64 @@ public class DoorController : MonoBehaviour
         {
             if (isOpen)
             {
-                Close(true);
+                Close();
             }
             else
             {
-                Open(true);
+                Open();
             }
         }
     }
 
-    public void Open(bool useAnimation)
+    public void AskOpen()
+    {
+        if (CheckCanOpen())
+            Open();
+    }
+
+    public void Open(bool useAnimation = true)
     {
         doorAC.SetBool("On", true);
         doorAC.SetBool("UseAnimation", useAnimation);
 
         isOpen = true;
     }
-    public void Close(bool useAnimation)
+    public void Close(bool useAnimation = true)
     {
         doorAC.SetBool("On", false);
         doorAC.SetBool("UseAnimation", useAnimation);
 
         isOpen = false;
+    }
+
+    public void LoadNPCObjects()
+    {
+        foreach (NPCController item in npcObjectsInteract)
+        {
+            item.SetDoorController(this);
+        }
+    }
+
+    public bool CheckCanOpen()
+    {
+        int npcCount = 0;
+
+        foreach (NPCController item in npcObjectsInteract)
+        {
+            if (item == null)
+                break;
+
+            if (item.GetIsFound())
+            {
+                npcCount++;
+            }
+
+            if (npcCount >= npcLenght)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 }

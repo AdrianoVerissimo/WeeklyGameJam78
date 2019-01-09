@@ -43,3 +43,24 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Ground
+    uniqueID: 1397244431
+    locked: 0
+  - name: Obstacle Below
+    uniqueID: 2463189841
+    locked: 0
+  - name: Player Below
+    uniqueID: 1425743071
+    locked: 0
+  - name: Player
+    uniqueID: 2298791519
+    locked: 0
+  - name: Player Above
+    uniqueID: 3286956245
+    locked: 0
+  - name: Obstacles
+    uniqueID: 4279050095
+    locked: 0
+  - name: Obstacle Above
+    uniqueID: 2855207159
+    locked: 0

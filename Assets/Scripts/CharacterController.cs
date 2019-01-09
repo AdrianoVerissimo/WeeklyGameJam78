@@ -22,6 +22,10 @@ public class CharacterController : MonoBehaviour
     public void UpdateAnimations()
     {
         characterAC.SetBool("Walk", movimentacaoPersonagem.GetIsWalking());
-        print(characterAC.GetBool("Walk") + " - " + Time.deltaTime);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        
     }
 }
