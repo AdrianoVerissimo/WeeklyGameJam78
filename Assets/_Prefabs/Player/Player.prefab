@@ -13,6 +13,9 @@ GameObject:
   - component: {fileID: 2577496773095147849}
   - component: {fileID: 2577496773095147854}
   - component: {fileID: 2577496773095147850}
+  - component: {fileID: 9133090761007369028}
+  - component: {fileID: 2678256444721450432}
+  - component: {fileID: 3826676725628656487}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -132,3 +135,53 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.32
+--- !u!114 &9133090761007369028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2577496773095147855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ee3e3684746a8141842cd8984544e3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &2678256444721450432
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2577496773095147855}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c2465695eecc20440a6e5fce14e528f3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3826676725628656487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2577496773095147855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e476d883a8f4bf4f89d1441f8a3eb96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrayColor:
+  - {r: 0.50980395, g: 0.50980395, b: 0.50980395, a: 1}
+  - {r: 0.5647059, g: 0.43019703, b: 0.41568628, a: 1}
+  - {r: 0.6431373, g: 0.28686404, b: 0.25882357, a: 1}
+  - {r: 0.85882354, g: 0.07058822, b: 0.07058822, a: 1}
+  spriteRenderer: {fileID: 2577496773095147848}
+  testMode: 1
