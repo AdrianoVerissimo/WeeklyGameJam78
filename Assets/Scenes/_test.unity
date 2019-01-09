@@ -1020,11 +1020,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2999862028800677459, guid: 94c7915a6562e9548a9671831cb18224,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2999862030054839795, guid: 94c7915a6562e9548a9671831cb18224,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1089,6 +1084,11 @@ PrefabInstance:
         type: 3}
       propertyPath: turnOffByTime
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2999862028800677459, guid: 94c7915a6562e9548a9671831cb18224,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2999862028800677461, guid: 94c7915a6562e9548a9671831cb18224,
         type: 3}
