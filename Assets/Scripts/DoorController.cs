@@ -7,7 +7,7 @@ public class DoorController : MonoBehaviour
     public NPCController[] npcObjectsInteract;
 
     private Animator doorAC;
-    private int npcLenght = 0;
+    public int npcLenght = 0;
 
     // Use this for initialization
     void Start()
@@ -18,6 +18,8 @@ public class DoorController : MonoBehaviour
             Open(false);
         else
             Close(false);
+
+        LoadNPCObjects();
     }
 
     private void Update()
@@ -38,19 +40,19 @@ public class DoorController : MonoBehaviour
     public void AskOpen()
     {
         if (CheckCanOpen())
-            Open();
+            Open(true);
     }
 
     public void Open(bool useAnimation = true)
     {
-        doorAC.SetBool("On", true);
+        doorAC.SetBool("Open", true);
         doorAC.SetBool("UseAnimation", useAnimation);
 
         isOpen = true;
     }
     public void Close(bool useAnimation = true)
     {
-        doorAC.SetBool("On", false);
+        doorAC.SetBool("Open", false);
         doorAC.SetBool("UseAnimation", useAnimation);
 
         isOpen = false;
@@ -58,9 +60,11 @@ public class DoorController : MonoBehaviour
 
     public void LoadNPCObjects()
     {
+        npcLenght = npcObjectsInteract.Length;
+
         foreach (NPCController item in npcObjectsInteract)
         {
-            item.SetDoorController(this);
+            item.doorController = GetComponent<DoorController>();
         }
     }
 

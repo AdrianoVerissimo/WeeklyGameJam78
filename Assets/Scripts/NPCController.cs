@@ -6,7 +6,7 @@ public class NPCController : MonoBehaviour
 {
     public ColorController colorController;
 
-    [HideInInspector]
+    
     public DoorController doorController;
 
     private bool isFound = false;
@@ -48,10 +48,15 @@ public class NPCController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (isFound)
+            return;
+
         if (collision.gameObject.tag == "Player")
         {
             SetIsFound(true);
             NextColorLevel();
+            doorController.AskOpen();
+            //doorController.Open(true);
         }
     }
 }
