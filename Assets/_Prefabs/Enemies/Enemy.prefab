@@ -261,7 +261,7 @@ Rigidbody2D:
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!114 &2999862030054839796
@@ -282,9 +282,9 @@ MonoBehaviour:
   arrayTagsCollider:
   - Player
   foundColor: {r: 0, g: 0, b: 0, a: 0}
-  turnOffByTime: 0
-  timeTurnedOn: 2
-  timeTurnedOff: 3
+  turnOffByTime: 1
+  timeTurnedOn: 4
+  timeTurnedOff: 4
 --- !u!114 &2781701373737930075
 MonoBehaviour:
   m_ObjectHideFlags: 0

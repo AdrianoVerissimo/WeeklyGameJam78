@@ -18,11 +18,14 @@ public class EnemyController : MonoBehaviour
 
     private SpriteRenderer spriteRendererTarget;
     private Color oldTargetColor;
+    private Animator enemyAC;
 
     private ColorController colorController;
 
     private void Start()
     {
+        enemyAC = GetComponent<Animator>();
+
         if (turnOffByTime)
         {
             StartCoroutine(TurnOff());
@@ -34,7 +37,8 @@ public class EnemyController : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (CheckCollider(collision.tag))
         {
@@ -59,12 +63,16 @@ public class EnemyController : MonoBehaviour
     {
         yield return new WaitForSeconds(timeTurnedOn);
 
+        enemyAC.SetBool("On", false);
+
         DisableSearchForPlayer();
         StartCoroutine(TurnOn());
     }
     public IEnumerator TurnOn()
     {
         yield return new WaitForSeconds(timeTurnedOff);
+
+        enemyAC.SetBool("On", true);
 
         EnableSearchForPlayer();
         StartCoroutine(TurnOff());

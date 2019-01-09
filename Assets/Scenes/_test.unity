@@ -353,18 +353,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.96, y: 0.96}
   m_EdgeRadius: 0
---- !u!60 &659344771 stripped
-PolygonCollider2D:
-  m_CorrespondingSourceObject: {fileID: 2999862030361823680, guid: 94c7915a6562e9548a9671831cb18224,
-    type: 3}
-  m_PrefabInstance: {fileID: 1898656512}
-  m_PrefabAsset: {fileID: 0}
---- !u!108 &1042364624 stripped
-Light:
-  m_CorrespondingSourceObject: {fileID: 2999862028800677459, guid: 94c7915a6562e9548a9671831cb18224,
-    type: 3}
-  m_PrefabInstance: {fileID: 1898656512}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1101371677 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2999862030054839795, guid: 94c7915a6562e9548a9671831cb18224,
@@ -714,49 +702,18 @@ PrefabInstance:
     - target: {fileID: 2999862030054839794, guid: 94c7915a6562e9548a9671831cb18224,
         type: 3}
       propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2999862029141209736, guid: 94c7915a6562e9548a9671831cb18224,
+        type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2999862030054839796, guid: 94c7915a6562e9548a9671831cb18224,
-        type: 3}
-      propertyPath: arrayTagsCollider.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2999862030054839796, guid: 94c7915a6562e9548a9671831cb18224,
-        type: 3}
-      propertyPath: rb2d
-      value: 
-      objectReference: {fileID: 1898656514}
-    - target: {fileID: 2999862030054839796, guid: 94c7915a6562e9548a9671831cb18224,
-        type: 3}
-      propertyPath: arrayTagsCollider.Array.data[0]
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 2999862030054839796, guid: 94c7915a6562e9548a9671831cb18224,
-        type: 3}
-      propertyPath: turnOffByTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2999862030054839796, guid: 94c7915a6562e9548a9671831cb18224,
-        type: 3}
-      propertyPath: lightObject
-      value: 
-      objectReference: {fileID: 1042364624}
-    - target: {fileID: 2999862030054839796, guid: 94c7915a6562e9548a9671831cb18224,
-        type: 3}
-      propertyPath: col2D
-      value: 
-      objectReference: {fileID: 659344771}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94c7915a6562e9548a9671831cb18224, type: 3}
 --- !u!4 &1898656513 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2999862030054839795, guid: 94c7915a6562e9548a9671831cb18224,
-    type: 3}
-  m_PrefabInstance: {fileID: 1898656512}
-  m_PrefabAsset: {fileID: 0}
---- !u!50 &1898656514 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 2999862030054839794, guid: 94c7915a6562e9548a9671831cb18224,
     type: 3}
   m_PrefabInstance: {fileID: 1898656512}
   m_PrefabAsset: {fileID: 0}
@@ -951,6 +908,11 @@ PrefabInstance:
         type: 3}
       propertyPath: anguloMudar
       value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 2999862030054839796, guid: 94c7915a6562e9548a9671831cb18224,
+        type: 3}
+      propertyPath: turnOffByTime
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2999862028800677461, guid: 94c7915a6562e9548a9671831cb18224,
         type: 3}
