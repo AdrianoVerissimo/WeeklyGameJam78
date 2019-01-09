@@ -56,7 +56,6 @@ public class NPCController : MonoBehaviour
             SetIsFound(true);
             NextColorLevel();
             doorController.AskOpen();
-            //doorController.Open(true);
         }
     }
 }
