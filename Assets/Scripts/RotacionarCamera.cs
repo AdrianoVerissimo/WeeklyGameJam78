@@ -10,7 +10,9 @@ public class RotacionarCamera : MonoBehaviour
     public bool rotacionarAutomatico = true;
     public float valor = 5;
     public float anguloMudar = 90f;
-    
+    public float valorTempo = 3f;
+    private float tempo;
+    private bool parado = false;
     private float RotacaoZ = 0;
 
     private float valorUsar = 0f;
@@ -19,21 +21,52 @@ public class RotacionarCamera : MonoBehaviour
     void Start()
     {
         valorUsar = valor;
+        tempo = valorTempo;
     }
 
     
     void FixedUpdate()
     {
-        if (rotacionarAutomatico)
+
+        if (Mathf.Abs(RotacaoZ) >= anguloMudar) //se o ângulo absoluto (sem sinal) for maior do que o ângulo limite
         {
-            //if (RotacaoZ >= anguloMudar || RotacaoZ <= -anguloMudar)
-            if (Mathf.Abs(RotacaoZ) >= anguloMudar) //se o ângulo absoluto (sem sinal) for maior do que o ângulo limite
+            parado = true; /*Se chegou no ângulo limite, câmera irá ficar parada*/
+            if(tempo <= 0) /*Quando o tempo for menor ou igual a 0*/
             {
                 valorUsar *= -1; //inverte o valor usado para somar no ângulo. Se positivo, vai somar; se negativo, vai subtrair.
+                parado = false;
+                tempo = valorTempo;
             }
+           
+        }
 
+     
+        if(parado) /*Se parado, o cronômetro irá inicializar*/
+        {
+            tempo -= Time.fixedDeltaTime;
+        }
+        else /*Se não estiver parado, rotação normal*/
+        {
             Rotacao(valorUsar * Time.fixedDeltaTime);
         }
+
+
+
+
+
+
+        //if (rotacionarAutomatico)
+        //{
+        //    //if (RotacaoZ >= anguloMudar || RotacaoZ <= -anguloMudar)
+        //    if (Mathf.Abs(RotacaoZ) >= anguloMudar) //se o ângulo absoluto (sem sinal) for maior do que o ângulo limite
+        //    {
+        //        valorUsar *= -1; //inverte o valor usado para somar no ângulo. Se positivo, vai somar; se negativo, vai subtrair.
+        //    }
+
+        //    Rotacao(valorUsar * Time.fixedDeltaTime);
+        //}
+
+        
     }
 
     void Rotacao(float valor) {

@@ -1,13 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ColorController : MonoBehaviour
+public class MudarCorNPC : MonoBehaviour
 {
-
     [Header("Color Config")]
     public Color[] arrayColor;
     public SpriteRenderer spriteRenderer;
-    
+
     [Header("Other Config")]
     public bool testMode = false;
 
@@ -21,13 +20,29 @@ public class ColorController : MonoBehaviour
         initialColor = spriteRenderer.color;
     }
 
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if(other.gameObject.tag == "Player") {
+            ShowNextColor();
+            Debug.Log("ok");
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            ShowPreviousColor();
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (testMode)
-        {
-            CheckInputs();
-        }
+        //if (testMode)
+        //{
+        //    CheckInputs();
+        //}
     }
 
     #region --- COLOR ---
@@ -80,17 +95,17 @@ public class ColorController : MonoBehaviour
 
     #region --- INPUTS ---
 
-    public void CheckInputs()
-    {
-        if (Input.GetButtonDown("Fire1"))
-        {
-            ShowNextColor();
-        }
-        else if (Input.GetButtonDown("Fire2"))
-        {
-            ShowPreviousColor();
-        }
-    }
+    //public void CheckInputs()
+    //{
+    //    if (Input.GetButtonDown("Fire1"))
+    //    {
+    //        ShowNextColor();
+    //    }
+    //    else if (Input.GetButtonDown("Fire2"))
+    //    {
+    //        ShowPreviousColor();
+    //    }
+    //}
 
     #endregion
 }
