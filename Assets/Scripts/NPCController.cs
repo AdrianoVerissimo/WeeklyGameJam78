@@ -5,6 +5,9 @@ using UnityEngine;
 public class NPCController : MonoBehaviour
 {
     public ColorController colorController;
+    public AudioController audioController;
+
+    public AudioClip soundInteract;
 
     [HideInInspector]
     public DoorController doorController;
@@ -73,6 +76,7 @@ public class NPCController : MonoBehaviour
             SetIsFound(true);
             MaxColorLevel();
             doorController.AskOpen();
+            audioController.PlayAudio(soundInteract);
         }
     }
 

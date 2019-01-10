@@ -5,6 +5,8 @@ public class DoorController : MonoBehaviour
 {
     public bool isOpen = false;
     public NPCController[] npcObjectsInteract;
+    public AudioController audioController;
+    public AudioClip soundInteract;
 
     private Animator doorAC;
     private int npcLenght = 0;
@@ -15,9 +17,9 @@ public class DoorController : MonoBehaviour
         doorAC = GetComponent<Animator>();
 
         if (isOpen)
-            Open(false);
+            Open(false, false);
         else
-            Close(false);
+            Close(false, false);
 
         LoadNPCObjects();
     }
@@ -43,19 +45,25 @@ public class DoorController : MonoBehaviour
             Open(true);
     }
 
-    public void Open(bool useAnimation = true)
+    public void Open(bool useAnimation = true, bool playAudio = true)
     {
         doorAC.SetBool("Open", true);
         doorAC.SetBool("UseAnimation", useAnimation);
 
         isOpen = true;
+
+        if (playAudio)
+            audioController.PlayAudio(soundInteract);
     }
-    public void Close(bool useAnimation = true)
+    public void Close(bool useAnimation = true, bool playAudio = true)
     {
         doorAC.SetBool("Open", false);
         doorAC.SetBool("UseAnimation", useAnimation);
 
         isOpen = false;
+
+        if (playAudio)
+            audioController.PlayAudio(soundInteract);
     }
 
     public void LoadNPCObjects()
