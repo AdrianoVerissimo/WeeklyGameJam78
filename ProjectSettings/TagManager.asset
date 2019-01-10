@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - npc
   layers:
   - Default
   - TransparentFX
@@ -40,4 +42,25 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 386699761
+    locked: 0
+  - name: Obstacle Below
+    uniqueID: 1146360541
+    locked: 0
+  - name: Player Below
+    uniqueID: 1239608547
+    locked: 0
+  - name: Player
+    uniqueID: 2785340555
+    locked: 0
+  - name: Player Above
+    uniqueID: 265622219
+    locked: 0
+  - name: Obstacle
+    uniqueID: 3093469275
+    locked: 0
+  - name: Obstacle Above
+    uniqueID: 872852419
     locked: 0

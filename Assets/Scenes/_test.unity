@@ -899,27 +899,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 2577496773095147848, guid: 93ee4ecc95319d84b8630b9b67ba4374,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2577496773095147848, guid: 93ee4ecc95319d84b8630b9b67ba4374,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.46415094
-      objectReference: {fileID: 0}
-    - target: {fileID: 2577496773095147848, guid: 93ee4ecc95319d84b8630b9b67ba4374,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.45990565
-      objectReference: {fileID: 0}
-    - target: {fileID: 2577496773095147848, guid: 93ee4ecc95319d84b8630b9b67ba4374,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: e35dc1f203f71c64ebb0af824a8c7254,
-        type: 3}
     - target: {fileID: 2577496773095147851, guid: 93ee4ecc95319d84b8630b9b67ba4374,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1718,8 +1697,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1397244431
-  m_SortingLayer: 0
+  m_SortingLayerID: 386699761
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b770fbd1b5cfaa7469f723c20ad84e40, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
