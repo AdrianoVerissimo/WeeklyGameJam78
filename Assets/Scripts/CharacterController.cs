@@ -24,8 +24,21 @@ public class CharacterController : MonoBehaviour
         characterAC.SetBool("Walk", movimentacaoPersonagem.GetIsWalking());
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void ResetAllNPCs()
     {
-        
+        GameObject[] arrayObjects = GameObject.FindGameObjectsWithTag("npc");
+        NPCController npcTemp;
+
+        if (arrayObjects.Length > 0)
+        {
+            foreach (GameObject item in arrayObjects)
+            {
+                npcTemp = item.GetComponent<NPCController>();
+                if (npcTemp != null)
+                {
+                    npcTemp.ResetProperties();
+                }
+            }
+        }
     }
 }

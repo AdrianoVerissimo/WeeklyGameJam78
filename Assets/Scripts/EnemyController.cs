@@ -44,6 +44,8 @@ public class EnemyController : MonoBehaviour
         {
             colorController = collision.GetComponent<ColorController>();
             colorController.ResetColor();
+
+            collision.GetComponent<CharacterController>().ResetAllNPCs();
         }
     }
 

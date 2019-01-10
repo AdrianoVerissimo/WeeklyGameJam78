@@ -74,4 +74,10 @@ public class NPCController : MonoBehaviour
             doorController.AskOpen();
         }
     }
+
+    public void ResetProperties()
+    {
+        ResetColor();
+        SetIsFound(false);
+    }
 }

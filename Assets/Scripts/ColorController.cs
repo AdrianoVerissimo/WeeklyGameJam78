@@ -13,12 +13,15 @@ public class ColorController : MonoBehaviour
     [Header("Other Config")]
     public bool testMode = false;
 
+    private List<Color> listColorInitial;
     private Color initialColor;
     private int currentColorLevel = 0;
 
     // Use this for initialization
     void Start()
     {
+        listColorInitial = listColor;
+
         if (listColor.Count > 0)
             spriteRenderer.color = listColor[0];
 
@@ -60,6 +63,7 @@ public class ColorController : MonoBehaviour
 
         currentColorLevel = 0;
         spriteRenderer.color = initialColor;
+        listColor = listColorInitial;
     }
     public void MaxColor()
     {
