@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class ColorController : MonoBehaviour
 {
 
     [Header("Color Config")]
-    public Color[] arrayColor;
+    public List<Color> listColor;
+    
     public SpriteRenderer spriteRenderer;
     
     [Header("Other Config")]
@@ -17,7 +19,9 @@ public class ColorController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        spriteRenderer.color = arrayColor[0];
+        if (listColor.Count > 0)
+            spriteRenderer.color = listColor[0];
+
         initialColor = spriteRenderer.color;
     }
 
@@ -60,11 +64,11 @@ public class ColorController : MonoBehaviour
 
     public void ShowNextColor()
     {
-        if (currentColorLevel + 1 >= arrayColor.Length)
+        if (currentColorLevel + 1 >= listColor.Count)
             return;
 
         AddColorLevel(1);
-        spriteRenderer.color = arrayColor[currentColorLevel];
+        spriteRenderer.color = listColor[currentColorLevel];
     }
     public void ShowPreviousColor()
     {
@@ -72,7 +76,7 @@ public class ColorController : MonoBehaviour
             return;
 
         SubtractColorLevel(1);
-        spriteRenderer.color = arrayColor[currentColorLevel];
+        spriteRenderer.color = listColor[currentColorLevel];
     }
 
 
