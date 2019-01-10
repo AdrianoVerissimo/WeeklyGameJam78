@@ -1384,118 +1384,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1759631894}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1759631896 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7307630227305899899, guid: 73b3ee95af7c7bf4e9d3cd49b14570f0,
+--- !u!114 &1759631899 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5721248189725648255, guid: 73b3ee95af7c7bf4e9d3cd49b14570f0,
     type: 3}
   m_PrefabInstance: {fileID: 1759631894}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1759631897 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7307630227305899897, guid: 73b3ee95af7c7bf4e9d3cd49b14570f0,
-    type: 3}
-  m_PrefabInstance: {fileID: 1759631894}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1759631896}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e476d883a8f4bf4f89d1441f8a3eb96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1759631898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1759631896}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0225f1b47212d13429b160b6352cb898, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorController: {fileID: 1759631897}
-  doorController: {fileID: 0}
---- !u!50 &1759631899
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1759631896}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!1 &1796259353 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7307630227305899899, guid: 73b3ee95af7c7bf4e9d3cd49b14570f0,
-    type: 3}
-  m_PrefabInstance: {fileID: 7307630225610316130}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1796259354 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7307630227305899896, guid: 73b3ee95af7c7bf4e9d3cd49b14570f0,
     type: 3}
   m_PrefabInstance: {fileID: 7307630225610316130}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1796259355 stripped
+--- !u!114 &1796259357 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7307630227305899897, guid: 73b3ee95af7c7bf4e9d3cd49b14570f0,
+  m_CorrespondingSourceObject: {fileID: 5721248189725648255, guid: 73b3ee95af7c7bf4e9d3cd49b14570f0,
     type: 3}
   m_PrefabInstance: {fileID: 7307630225610316130}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1796259353}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e476d883a8f4bf4f89d1441f8a3eb96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1796259356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1796259353}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0225f1b47212d13429b160b6352cb898, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorController: {fileID: 1796259355}
-  doorController: {fileID: 0}
---- !u!50 &1796259357
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1796259353}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1001 &1898656512
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1886,59 +1804,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2068583144}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2068583146 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7307630227305899899, guid: 73b3ee95af7c7bf4e9d3cd49b14570f0,
+--- !u!114 &2068583149 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5721248189725648255, guid: 73b3ee95af7c7bf4e9d3cd49b14570f0,
     type: 3}
   m_PrefabInstance: {fileID: 2068583144}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2068583147 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7307630227305899897, guid: 73b3ee95af7c7bf4e9d3cd49b14570f0,
-    type: 3}
-  m_PrefabInstance: {fileID: 2068583144}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2068583146}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e476d883a8f4bf4f89d1441f8a3eb96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2068583148
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2068583146}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0225f1b47212d13429b160b6352cb898, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorController: {fileID: 2068583147}
-  doorController: {fileID: 0}
---- !u!50 &2068583149
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2068583146}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &2097946413
 GameObject:
   m_ObjectHideFlags: 0
@@ -2281,17 +2158,17 @@ PrefabInstance:
         type: 3}
       propertyPath: npcObjectsInteract.Array.data[0]
       value: 
-      objectReference: {fileID: 1796259356}
+      objectReference: {fileID: 1796259357}
     - target: {fileID: 4082145302099463237, guid: c53cdaa77f7962840980f71ed2dcb2de,
         type: 3}
       propertyPath: npcObjectsInteract.Array.data[1]
       value: 
-      objectReference: {fileID: 2068583148}
+      objectReference: {fileID: 2068583149}
     - target: {fileID: 4082145302099463237, guid: c53cdaa77f7962840980f71ed2dcb2de,
         type: 3}
       propertyPath: npcObjectsInteract.Array.data[2]
       value: 
-      objectReference: {fileID: 1759631898}
+      objectReference: {fileID: 1759631899}
     - target: {fileID: 4082145302099463237, guid: c53cdaa77f7962840980f71ed2dcb2de,
         type: 3}
       propertyPath: isOpen

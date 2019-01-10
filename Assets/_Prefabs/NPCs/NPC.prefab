@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7307630227305899896}
   - component: {fileID: 7307630227305899897}
+  - component: {fileID: 5721248189725648255}
+  - component: {fileID: 6082681884627431408}
   m_Layer: 0
   m_Name: NPC
   m_TagString: npc
@@ -47,6 +49,41 @@ MonoBehaviour:
   listColor: []
   spriteRenderer: {fileID: 7307630227642590205}
   testMode: 0
+--- !u!114 &5721248189725648255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7307630227305899899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0225f1b47212d13429b160b6352cb898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorController: {fileID: 7307630227305899897}
+  doorController: {fileID: 0}
+--- !u!50 &6082681884627431408
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7307630227305899899}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &7307630227642590207
 GameObject:
   m_ObjectHideFlags: 0
