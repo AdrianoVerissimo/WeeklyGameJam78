@@ -58,9 +58,6 @@ public class ColorController : MonoBehaviour
     }
     public void ResetColor()
     {
-        if (getCurrentColorLevel() == 0)
-            return;
-
         currentColorLevel = 0;
         spriteRenderer.color = initialColor;
         listColor = listColorInitial;

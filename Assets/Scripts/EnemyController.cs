@@ -10,14 +10,12 @@ public class EnemyController : MonoBehaviour
     public Collider2D col2D;
 
     public string[] arrayTagsCollider;
-    public Color foundColor;
 
     public bool turnOffByTime = false;
     public float timeTurnedOn = 2f;
     public float timeTurnedOff = 3f;
 
     private SpriteRenderer spriteRendererTarget;
-    private Color oldTargetColor;
     private Animator enemyAC;
 
     private ColorController colorController;
