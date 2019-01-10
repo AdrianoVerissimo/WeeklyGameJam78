@@ -7,6 +7,8 @@ public class MovimentacaoPersonagem : MonoBehaviour
     Rigidbody2D player;
     Vector2 move;
     public float velocidade = 5f; /*velocidade da movimentação*/
+
+    private bool isWalking = false;
     void Start()
     {
         //Linkando o Rigidbody na variável ao iniciar o game
@@ -17,8 +19,6 @@ public class MovimentacaoPersonagem : MonoBehaviour
     
     void FixedUpdate()
     {
-        
-        
         //Eixos para a movimentação
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
@@ -30,8 +30,11 @@ public class MovimentacaoPersonagem : MonoBehaviour
         //Aplicando movimento
         player.velocity = move * velocidade * Time.fixedDeltaTime;
 
-       
+        isWalking = player.velocity.x != 0f || player.velocity.y != 0f;
+    }
 
-  
+    public bool GetIsWalking()
+    {
+        return isWalking;
     }
 }

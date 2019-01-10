@@ -71,7 +71,6 @@ public class RotacionarCamera : MonoBehaviour
 
     void Rotacao(float valor) {
         RotacaoZ += valor;
-        print(RotacaoZ);
 
         if(RotacaoZ >= 360f) {
             RotacaoZ -= 360f;
