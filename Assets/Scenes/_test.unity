@@ -1993,7 +1993,7 @@ PrefabInstance:
     - target: {fileID: 4082145301506295167, guid: c53cdaa77f7962840980f71ed2dcb2de,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4082145301506295167, guid: c53cdaa77f7962840980f71ed2dcb2de,
         type: 3}
@@ -2252,17 +2252,17 @@ PrefabInstance:
     - target: {fileID: 4082145301506295164, guid: c53cdaa77f7962840980f71ed2dcb2de,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.2809531
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4082145301506295164, guid: c53cdaa77f7962840980f71ed2dcb2de,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.745283
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4082145301506295164, guid: c53cdaa77f7962840980f71ed2dcb2de,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.13710396
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c53cdaa77f7962840980f71ed2dcb2de, type: 3}
@@ -2433,5 +2433,15 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: b87f9c43932b2e142ba8378767c68a5e, type: 2}
+    - target: {fileID: 7307630227642590146, guid: 73b3ee95af7c7bf4e9d3cd49b14570f0,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 7307630227642590146, guid: 73b3ee95af7c7bf4e9d3cd49b14570f0,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.64
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73b3ee95af7c7bf4e9d3cd49b14570f0, type: 3}
