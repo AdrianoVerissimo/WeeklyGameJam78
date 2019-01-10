@@ -81,11 +81,16 @@ public class DoorController : MonoBehaviour
             {
                 npcCount++;
             }
+        }
 
-            if (npcCount >= npcLenght)
+        if (npcCount >= npcLenght)
+        {
+            foreach (NPCController item in npcObjectsInteract)
             {
-                return true;
+                item.SetComplete(true);
             }
+
+            return true;
         }
 
         return false;

@@ -34,6 +34,9 @@ public class CharacterController : MonoBehaviour
             foreach (GameObject item in arrayObjects)
             {
                 npcTemp = item.GetComponent<NPCController>();
+                if (npcTemp.GetComplete())
+                    continue;
+
                 if (npcTemp != null)
                 {
                     npcTemp.ResetProperties();

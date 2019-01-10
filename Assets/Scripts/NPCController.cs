@@ -10,6 +10,7 @@ public class NPCController : MonoBehaviour
     public DoorController doorController;
 
     private bool isFound = false;
+    private bool complete = false;
 
     // Start is called before the first frame update
     void Start()
@@ -79,5 +80,14 @@ public class NPCController : MonoBehaviour
     {
         ResetColor();
         SetIsFound(false);
+    }
+
+    public void SetComplete(bool value)
+    {
+        complete = value;
+    }
+    public bool GetComplete()
+    {
+        return complete;
     }
 }
