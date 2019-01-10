@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38855f4e7d0cccd4db43013f8a02de2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isOpen: 1
+  isOpen: 0
   npcObjectsInteract: []
   audioController: {fileID: 6852676198415291344}
   soundInteract: {fileID: 8300000, guid: b258e4ba48c472d4bbf14fb27e0707ca, type: 3}
