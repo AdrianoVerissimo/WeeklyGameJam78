@@ -1,13 +1,14 @@
 fileFormatVersion: 2
-guid: e35dc1f203f71c64ebb0af824a8c7254
+guid: f62257966e62a5d4eada659f657e6e94
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Spritesheet WC Main_0
-    21300002: Spritesheet WC Main_1
-    21300004: Spritesheet WC Main_2
-    21300006: Spritesheet WC Main_3
-    21300008: Spritesheet WC Main_4
-    21300010: Spritesheet WC Main_5
+    21300000: Spritesheet Main idle_0
+    21300002: Spritesheet Main idle_1
+    21300004: Spritesheet Main idle_2
+    21300006: Spritesheet Main idle_3
+    21300008: Spritesheet Main idle_4
+    21300010: Spritesheet Main idle_5
+    21300012: Spritesheet Main idle_6
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -87,17 +88,6 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
   - serializedVersion: 2
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - serializedVersion: 2
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -112,7 +102,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Spritesheet WC Main_0
+      name: Spritesheet Main idle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -126,13 +116,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48b2ac439b2a47242bd598b3bdbd9cc0
+      spriteID: 95106ccda07c4fa4390443fa3d1b6aa5
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet WC Main_1
+      name: Spritesheet Main idle_1
       rect:
         serializedVersion: 2
         x: 64
@@ -146,13 +136,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a75c2675c8646254ba119826e7152ec1
+      spriteID: fcf69e90c67d723458f55745bbc17e8b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet WC Main_2
+      name: Spritesheet Main idle_2
       rect:
         serializedVersion: 2
         x: 128
@@ -166,13 +156,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7032d60310b13940a81c2887fa10d8d
+      spriteID: 4901e0382e4b086449343fd42f22fd3c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet WC Main_3
+      name: Spritesheet Main idle_3
       rect:
         serializedVersion: 2
         x: 192
@@ -186,13 +176,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61d560fe5e927d047a17ae600b01d25d
+      spriteID: b9edf4b1b5337c54282e34e95cf591ef
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet WC Main_4
+      name: Spritesheet Main idle_4
       rect:
         serializedVersion: 2
         x: 256
@@ -206,13 +196,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b8cf4cbd34d9bb4fab0d444599f1869
+      spriteID: 062ea32f76332ab4c96c01b53801450a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet WC Main_5
+      name: Spritesheet Main idle_5
       rect:
         serializedVersion: 2
         x: 320
@@ -226,7 +216,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6dc748a6e528d0e43a3110aef5be1653
+      spriteID: 3129dceafed3254479e0d09fffa5317d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet Main idle_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6aa9799b0accab4e8891ea3b93b5eeb
       vertices: []
       indices: 
       edges: []
@@ -234,7 +244,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: d1f2465adf679514bb86e5cd8b5cd691
+    spriteID: 8be9cc23ae666184aa659e7fa527b2a3
     vertices: []
     indices: 
     edges: []
