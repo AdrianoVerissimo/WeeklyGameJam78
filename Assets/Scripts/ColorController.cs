@@ -61,14 +61,26 @@ public class ColorController : MonoBehaviour
         currentColorLevel = 0;
         spriteRenderer.color = initialColor;
     }
+    public void MaxColor()
+    {
+        int value = CountListColor() - 1;
+        if (getCurrentColorLevel() + 1 >= CountListColor())
+            return;
+
+        SetColorLevel(value);
+    }
+    public int CountListColor()
+    {
+        return listColor.Count;
+    }
 
     public void ShowNextColor()
     {
-        if (currentColorLevel + 1 >= listColor.Count)
+        if (currentColorLevel + 1 >= CountListColor())
             return;
 
         AddColorLevel(1);
-        spriteRenderer.color = listColor[currentColorLevel];
+        UpdateSpriteColor();
     }
     public void ShowPreviousColor()
     {
@@ -76,6 +88,18 @@ public class ColorController : MonoBehaviour
             return;
 
         SubtractColorLevel(1);
+        UpdateSpriteColor();
+    }
+    public void ShowMaxColor()
+    {
+        if (currentColorLevel + 1 >= CountListColor())
+            return;
+
+        MaxColor();
+        UpdateSpriteColor();
+    }
+    public void UpdateSpriteColor()
+    {
         spriteRenderer.color = listColor[currentColorLevel];
     }
 

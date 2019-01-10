@@ -6,7 +6,7 @@ public class NPCController : MonoBehaviour
 {
     public ColorController colorController;
 
-    
+    [HideInInspector]
     public DoorController doorController;
 
     private bool isFound = false;
@@ -26,6 +26,10 @@ public class NPCController : MonoBehaviour
     public void NextColorLevel()
     {
         colorController.ShowNextColor();
+    }
+    public void MaxColorLevel()
+    {
+        colorController.ShowMaxColor();
     }
     public void ResetColor()
     {
@@ -53,8 +57,20 @@ public class NPCController : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
         {
+            ColorController colorControllerTemp = collision.gameObject.GetComponent<ColorController>();
+            if (colorControllerTemp.CountListColor() > 0 && colorControllerTemp.listColor[0] == colorController.listColor[0])
+            {
+                colorControllerTemp.ShowNextColor();
+            }
+            else
+            {
+                colorControllerTemp.listColor = colorController.listColor;
+                colorControllerTemp.SetColorLevel(colorController.getCurrentColorLevel());
+                colorControllerTemp.UpdateSpriteColor();
+            }
+
             SetIsFound(true);
-            NextColorLevel();
+            MaxColorLevel();
             doorController.AskOpen();
         }
     }

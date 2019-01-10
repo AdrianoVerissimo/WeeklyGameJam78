@@ -7,7 +7,7 @@ public class DoorController : MonoBehaviour
     public NPCController[] npcObjectsInteract;
 
     private Animator doorAC;
-    public int npcLenght = 0;
+    private int npcLenght = 0;
 
     // Use this for initialization
     void Start()
