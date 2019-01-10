@@ -8,12 +8,13 @@ public class MovimentacaoPersonagem : MonoBehaviour
     Vector2 move;
     public float velocidade = 5f; /*velocidade da movimentação*/
 
+    private RotacionarCamera rotacionarCamera;
     private bool isWalking = false;
     void Start()
     {
         //Linkando o Rigidbody na variável ao iniciar o game
         player = GetComponent<Rigidbody2D>();
-        
+        rotacionarCamera = GetComponent<RotacionarCamera>();
     }
 
     
@@ -22,7 +23,8 @@ public class MovimentacaoPersonagem : MonoBehaviour
         //Eixos para a movimentação
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
-        
+
+        UpdateDirection(horizontal, vertical);
         
         //Movimentação do personagem
         move = new Vector2(horizontal, vertical);
@@ -31,6 +33,18 @@ public class MovimentacaoPersonagem : MonoBehaviour
         player.velocity = move * velocidade * Time.fixedDeltaTime;
 
         isWalking = player.velocity.x != 0f || player.velocity.y != 0f;
+    }
+
+    public void UpdateDirection(float horizontal, float vertical)
+    {
+        if (horizontal > 0f)
+            rotacionarCamera.SetRotation(270f);
+        else if (horizontal < 0f)
+            rotacionarCamera.SetRotation(90f);
+        else if (vertical > 0f)
+            rotacionarCamera.SetRotation(0f);
+        else if (vertical < 0f)
+            rotacionarCamera.SetRotation(180f);
     }
 
     public bool GetIsWalking()

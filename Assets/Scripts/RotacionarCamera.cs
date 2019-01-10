@@ -40,14 +40,17 @@ public class RotacionarCamera : MonoBehaviour
            
         }
 
-     
-        if(parado) /*Se parado, o cronômetro irá inicializar*/
+
+        if (rotacionarAutomatico)
         {
-            tempo -= Time.fixedDeltaTime;
-        }
-        else /*Se não estiver parado, rotação normal*/
-        {
-            Rotacao(valorUsar * Time.fixedDeltaTime);
+            if (parado) /*Se parado, o cronômetro irá inicializar*/
+            {
+                tempo -= Time.fixedDeltaTime;
+            }
+            else /*Se não estiver parado, rotação normal*/
+            {
+                Rotacao(valorUsar * Time.fixedDeltaTime);
+            }
         }
 
 
@@ -72,17 +75,25 @@ public class RotacionarCamera : MonoBehaviour
     void Rotacao(float valor) {
         RotacaoZ += valor;
 
-        if(RotacaoZ >= 360f) {
-            RotacaoZ -= 360f;
+        SetRotation(RotacaoZ);
+    }
+
+    public void SetRotation(float value)
+    {
+        
+        if (value >= 360f)
+        {
+            value -= 360f;
         }
 
 
-        else if(RotacaoZ <= -360f) {
-            RotacaoZ += 360f;
+        else if (value <= -360f)
+        {
+            value += 360f;
 
         }
 
-        Quaternion NovaRotacao = Quaternion.Euler(0, 0, RotacaoZ);
+        Quaternion NovaRotacao = Quaternion.Euler(0, 0, value);
         transform.rotation = NovaRotacao;
     }
 }
