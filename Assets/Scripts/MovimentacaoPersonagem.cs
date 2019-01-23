@@ -33,6 +33,9 @@ public class MovimentacaoPersonagem : MonoBehaviour
         player.velocity = move * velocidade * Time.fixedDeltaTime;
 
         isWalking = player.velocity.x != 0f || player.velocity.y != 0f;
+
+        // Aplicar som dos passos conforme valores dos inputs
+        SomPassos(horizontal, vertical);
     }
 
     public void UpdateDirection(float horizontal, float vertical)
@@ -50,5 +53,16 @@ public class MovimentacaoPersonagem : MonoBehaviour
     public bool GetIsWalking()
     {
         return isWalking;
+    }
+
+    public void SomPassos(float h, float v) {
+        if(h != 0 || v != 0) {
+            GetComponent<AudioController>().PlayAudio(GetComponent<AudioSource>().clip,true,true);
+           
+        }
+        else {
+            GetComponent<AudioController>().StopAudio();
+            
+        }
     }
 }
