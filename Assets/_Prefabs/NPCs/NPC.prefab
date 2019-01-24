@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 7307630227305899896}
   - component: {fileID: 7307630227305899897}
   - component: {fileID: 5721248189725648255}
+  - component: {fileID: 6997650706186222112}
+  - component: {fileID: 4212269116747943847}
   - component: {fileID: 6082681884627431408}
-  - component: {fileID: 534008738640388076}
-  - component: {fileID: 3086580665595573263}
   - component: {fileID: 8866537373736459013}
   m_Layer: 0
   m_Name: NPC
@@ -65,31 +65,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorController: {fileID: 7307630227305899897}
-  audioController: {fileID: 3086580665595573263}
-  soundInteract: {fileID: 0}
+  audioController: {fileID: 6997650706186222112}
+  soundInteract: {fileID: 8300000, guid: b258e4ba48c472d4bbf14fb27e0707ca, type: 3}
   doorController: {fileID: 0}
---- !u!50 &6082681884627431408
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!114 &6997650706186222112
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7307630227305899899}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 0
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!82 &534008738640388076
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aef44dcb9c8e254ba44667d84c5116b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 4212269116747943847}
+--- !u!82 &4212269116747943847
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99,7 +91,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b258e4ba48c472d4bbf14fb27e0707ca, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -185,19 +177,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &3086580665595573263
-MonoBehaviour:
+--- !u!50 &6082681884627431408
+Rigidbody2D:
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7307630227305899899}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6aef44dcb9c8e254ba44667d84c5116b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioSource: {fileID: 534008738640388076}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!95 &8866537373736459013
 Animator:
   serializedVersion: 3

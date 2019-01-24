@@ -56,6 +56,7 @@ public class NPCController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        
         if (isFound)
             return;
 
