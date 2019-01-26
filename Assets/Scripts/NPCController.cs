@@ -57,7 +57,7 @@ public class NPCController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         
-        if (isFound)
+        if (isFound || doorController == null)
             return;
 
         if (collision.gameObject.tag == "Player")
