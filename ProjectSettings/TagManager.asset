@@ -58,3 +58,6 @@ TagManager:
   - name: Enemy
     uniqueID: 265622219
     locked: 0
+  - name: Obstacle Above
+    uniqueID: 99345797
+    locked: 0
