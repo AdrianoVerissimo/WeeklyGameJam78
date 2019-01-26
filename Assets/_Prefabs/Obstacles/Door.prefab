@@ -289,9 +289,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isOpen: 0
-  npcObjectsInteract: []
+  npcObjectsInteract:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   audioController: {fileID: 6852676198415291344}
-  soundInteract: {fileID: 8300000, guid: b258e4ba48c472d4bbf14fb27e0707ca, type: 3}
+  soundInteract: {fileID: 8300000, guid: accec8c7b7b6ba847b7325f2cf6443ed, type: 3}
 --- !u!95 &4082145302099463236
 Animator:
   serializedVersion: 3
@@ -334,7 +337,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: accec8c7b7b6ba847b7325f2cf6443ed, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.503
   m_Pitch: 1
