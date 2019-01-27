@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public class EnemyController : MonoBehaviour
 {
     public Rigidbody2D rb2d;
-    public Light lightObject;
+    public GameObject lightObject;
     public Collider2D col2D;
 
     public string[] arrayTagsCollider;
@@ -81,7 +81,7 @@ public class EnemyController : MonoBehaviour
     public void SetSearchForPlayer(bool value)
     {
         col2D.enabled = value;
-        lightObject.enabled = value;
+        lightObject.SetActive(value);
     }
     public void EnableSearchForPlayer()
     {

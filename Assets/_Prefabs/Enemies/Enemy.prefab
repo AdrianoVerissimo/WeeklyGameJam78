@@ -260,7 +260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb2d: {fileID: 2999862030054839794}
-  lightObject: {fileID: 0}
+  lightObject: {fileID: 2999862030361823682}
   col2D: {fileID: 2999862030361823680}
   arrayTagsCollider:
   - Player
